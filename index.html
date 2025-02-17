@@ -10,7 +10,7 @@
 <body>
 
     <!-- Intro Animation -->
-    <div class="intro">
+    <div class="intro" id="home">
         <div class="gfg">
             <span class="letter g">G</span>
             <span class="letter f">F</span>
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <section class="services">
+    <section class="services" id="services">
         <h2>Our Services</h2>
 
         <div class="service-package">
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="service-package reverse">
+        <div class="service-package ">
             <div class="service-info">
                 <h3>Marketing</h3>
                 <p>Effective marketing strategies to grow your business.</p>
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div class="service-package reverse">
+        <div class="service-package">
             <div class="service-info">
                 <h3>Media</h3>
                 <p>High-quality media production services.</p>
@@ -105,7 +105,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         
         <div class="gallery-content">
             <div class="gallery-grid">
@@ -122,7 +122,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <h2>About Us</h2>
         <div class="about-content">
             <div class="about-info">
@@ -161,39 +161,46 @@
             </div>
         </div>
         
-        <button class="prev" id="prevBtn">❮ Previous</button>
-        <button class="next" id="nextBtn">Next ❯</button>
+        <button class="prev" id="prevBtn">❮ </button>
+        <button class="next" id="nextBtn"> ❯</button>
     </section>
-    <section class="pricing-section">
+    <section class="pricing-section" id="pricing">
         <h2 class="pricing-title">Our Pricing Plans</h2>
         <p class="pricing-subtitle">Choose the perfect plan for your business needs.</p>
     
         <div class="pricing-container">
     
             <!-- Web Development -->
-            <div class="pricing-card highlight">
+            <div class="pricing-card">
                 <h3 class="pricing-plan">Web Development</h3>
                 <ul class="pricing-features">
-                    <li><strong>Basic ($500 - $1000)</strong></li>
-                    <li>✔ 1-Page Website</li>
-                    <li>✔ Responsive Design</li>
-                    <li>✔ Basic SEO Optimization</li>
-                    <li>✔ Contact Form</li>
-                    <li>✖ E-commerce & Advanced Features</li>
-                    
-                    <li><strong>Standard ($1500 - $3000)</strong></li>
+                    <div>
+                        <li><strong>Basic (k500 - k1000)</strong></li>
+                        <li>✔ 1-Page Website</li>
+                        <li>✔ Responsive Design</li>
+                        <li>✔ Basic SEO Optimization</li>
+                        <li>✔ Contact Form</li>
+                        <li>✖ E-commerce & Advanced Features</li>
+                    </div>
+                  
+                    <div>
+                        <li><strong>Standard (k1500 - k3000)</strong></li>
                     <li>✔ Up to 5 Pages</li>
                     <li>✔ Advanced SEO & Google Indexing</li>
                     <li>✔ Blog Integration</li>
                     <li>✔ Social Media Integration</li>
                     <li>✔ CMS (WordPress, Shopify, etc.)</li>
+                    </div>
                     
-                    <li><strong>Pro ($3500 - $5000)</strong></li>
-                    <li>✔ Unlimited Pages</li>
-                    <li>✔ E-Commerce & Payment Integration</li>
-                    <li>✔ Custom Features (API, Memberships, etc.)</li>
-                    <li>✔ Speed & Security Optimization</li>
-                    <li>✔ Full Backend Development</li>
+                    <div>
+                        <li><strong>Pro (k3500 - k5000)</strong></li>
+                        <li>✔ Unlimited Pages</li>
+                        <li>✔ E-Commerce & Payment Integration</li>
+                        <li>✔ Custom Features (API, Memberships, etc.)</li>
+                        <li>✔ Speed & Security Optimization</li>
+                        <li>✔ Full Backend Development</li>
+                    </div>
+                  
                 </ul>
                 <button class="pricing-btn">Get Started</button>
             </div>
@@ -202,21 +209,28 @@
             <div class="pricing-card">
                 <h3 class="pricing-plan">Branding</h3>
                 <ul class="pricing-features">
-                    <li><strong>Basic ($300)</strong></li>
-                    <li>✔ Logo Design</li>
-                    <li>✔ Color Palette Selection</li>
-                    <li>✔ Font Pairing Guide</li>
-                    
-                    <li><strong>Standard ($800)</strong></li>
-                    <li>✔ Everything in Basic</li>
-                    <li>✔ Business Card & Letterhead Design</li>
-                    <li>✔ Social Media Kit (Profile & Cover Images)</li>
-                    
-                    <li><strong>Pro ($2500)</strong></li>
-                    <li>✔ Everything in Standard</li>
-                    <li>✔ Full Brand Guidelines & Strategy</li>
-                    <li>✔ Custom Illustrations & Icons</li>
-                    <li>✔ Branded Social Media Templates</li>
+                    <div>
+                        <li><strong>Basic (k300)</strong></li>
+                        <li>✔ Logo Design</li>
+                        <li>✔ Color Palette Selection</li>
+                        <li>✔ Font Pairing Guide</li>
+                    </div>
+                   
+                    <div>
+                        <li><strong>Standard (k800)</strong></li>
+                        <li>✔ Everything in Basic</li>
+                        <li>✔ Business Card & Letterhead Design</li>
+                        <li>✔ Social Media Kit (Profile & Cover Images)</li>
+                    </div>
+                
+                    <div>
+                        <li><strong>Pro (k2500)</strong></li>
+                        <li>✔ Everything in Standard</li>
+                        <li>✔ Full Brand Guidelines & Strategy</li>
+                        <li>✔ Custom Illustrations & Icons</li>
+                        <li>✔ Branded Social Media Templates</li>
+                    </div>    
+                   
                 </ul>
                 <button class="pricing-btn">Get Started</button>
             </div>
@@ -225,21 +239,28 @@
             <div class="pricing-card">
                 <h3 class="pricing-plan">Marketing</h3>
                 <ul class="pricing-features">
-                    <li><strong>Basic ($400)</strong></li>
+                    <div>
+                        <li><strong>Basic (k400)</strong></li>
                     <li>✔ Social Media Account Setup</li>
                     <li>✔ 5 Posts + Ad Setup</li>
+                    </div>
                     
-                    <li><strong>Standard ($1500)</strong></li>
-                    <li>✔ Everything in Basic</li>
-                    <li>✔ Email Marketing Campaign</li>
-                    <li>✔ SEO Optimization</li>
-                    <li>✔ Google Ads & Facebook Ads</li>
-                    
-                    <li><strong>Pro ($3000)</strong></li>
-                    <li>✔ Everything in Standard</li>
-                    <li>✔ Full Digital Marketing Strategy</li>
-                    <li>✔ Advanced Conversion Optimization</li>
-                    <li>✔ Monthly Analytics Report</li>
+                    <div>
+                        <li><strong>Standard (k1500)</strong></li>
+                        <li>✔ Everything in Basic</li>
+                        <li>✔ Email Marketing Campaign</li>
+                        <li>✔ SEO Optimization</li>
+                        <li>✔ Google Ads & Facebook Ads</li>
+                    </div>
+                  
+                    <div>
+                        <li><strong>Pro (k3000)</strong></li>
+                        <li>✔ Everything in Standard</li>
+                        <li>✔ Full Digital Marketing Strategy</li>
+                        <li>✔ Advanced Conversion Optimization</li>
+                        <li>✔ Monthly Analytics Report</li>
+                    </div>
+                   
                 </ul>
                 <button class="pricing-btn">Get Started</button>
             </div>
@@ -248,20 +269,27 @@
             <div class="pricing-card">
                 <h3 class="pricing-plan">Photography</h3>
                 <ul class="pricing-features">
-                    <li><strong>Basic ($200)</strong></li>
+                    <div>
+                        <li><strong>Basic (k200)</strong></li>
                     <li>✔ 1-Hour Photoshoot</li>
                     <li>✔ 10 Edited Photos</li>
+                    </div>
                     
-                    <li><strong>Standard ($800)</strong></li>
-                    <li>✔ Everything in Basic</li>
-                    <li>✔ Event Coverage (Up to 4 Hours)</li>
-                    <li>✔ 50 Edited Photos</li>
-                    
-                    <li><strong>Pro ($1500)</strong></li>
+                    <div>
+                        <li><strong>Standard (k800)</strong></li>
+                        <li>✔ Everything in Basic</li>
+                        <li>✔ Event Coverage (Up to 4 Hours)</li>
+                        <li>✔ 50 Edited Photos</li>
+                    </div>
+                   
+                    <div>
+                        <li><strong>Pro (k1500)</strong></li>
                     <li>✔ Everything in Standard</li>
                     <li>✔ Full-Day Coverage</li>
                     <li>✔ 100 Edited Photos</li>
                     <li>✔ Photo Album</li>
+                    </div>
+                    
                 </ul>
                 <button class="pricing-btn">Get Started</button>
             </div>
@@ -270,19 +298,26 @@
             <div class="pricing-card">
                 <h3 class="pricing-plan">Videography</h3>
                 <ul class="pricing-features">
-                    <li><strong>Basic ($500)</strong></li>
+                    <div>
+                        <li><strong>Basic (k500)</strong></li>
                     <li>✔ Short Video Clips (2 Minutes)</li>
                     <li>✔ Basic Editing & Transitions</li>
+                    </div>
                     
-                    <li><strong>Standard ($2000)</strong></li>
+                    <div>
+                        <li><strong>Standard (k2000)</strong></li>
                     <li>✔ Everything in Basic</li>
                     <li>✔ Full Event Coverage</li>
                     <li>✔ Professional Editing & Effects</li>
+                    </div>
                     
-                    <li><strong>Pro ($5000)</strong></li>
-                    <li>✔ Everything in Standard</li>
-                    <li>✔ 4K Cinematic Production</li>
-                    <li>✔ Drone Shots & Custom Animations</li>
+                    <div>
+                        <li><strong>Pro (k5000)</strong></li>
+                        <li>✔ Everything in Standard</li>
+                        <li>✔ 4K Cinematic Production</li>
+                        <li>✔ Drone Shots & Custom Animations</li>
+                    </div>
+                   
                 </ul>
                 <button class="pricing-btn">Get Started</button>
             </div>
@@ -291,13 +326,16 @@
             <div class="pricing-card one-time">
                 <h3 class="pricing-plan">One-Time Services</h3>
                 <ul class="pricing-features">
-                    <li>✔ Logo Design - $100</li>
-                    <li>✔ Flyer Design - $50</li>
-                    <li>✔ Business Card Design - $80</li>
-                    <li>✔ Single Photoshoot - $150</li>
-                    <li>✔ Social Media Post Design - $30</li>
-                    <li>✔ Product Photography - $300</li>
-                    <li>✔ Short Video Ad - $250</li>
+                    <div>
+                        <li>✔ Logo Design - k100</li>
+                        <li>✔ Flyer Design - k150</li>
+                        <li>✔ Business Card Design - k100</li>
+                        <li>✔ Single Photoshoot - k50</li>
+                        <li>✔ Social Media Post Design - k100</li>
+                        <li>✔ Product Photography - k300</li>
+                        <li>✔ Short Video Ad - k250</li>
+                    </div>
+                   
                 </ul>
                 <button class="pricing-btn">Order Now</button>
             </div>
@@ -320,12 +358,12 @@
         </nav>
         <div class="sidebar" id="sidebar">
             <ul class="sidebar-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -335,15 +373,14 @@
 
 
     <footer>
-        <div class="footer-content">
+        <div class="footer-content" id="contact">
             
     <section >
         <h2>Contact Us</h2>
         <div class="contact-container">
             <div class="contact-info">
-                <p><strong>Email:</strong> info@example.com</p>
-                <p><strong>Phone:</strong> +1 (234) 567-890</p>
-                <p><strong>Address:</strong> 123 Main St, Anytown, USA</p>
+                <p><strong>Email:</strong> gfgmedia@gmail.com</p>
+                <p><strong>Phone:</strong> +260 762 357 426</p>
             </div>
             <div class="social-media">
                 <h3>Follow Us</h3>
@@ -382,7 +419,7 @@
           
         </div>
         <div class="footer-bottom">
-            <p>© 2025 GFG Media | Designed with ❤️</p>
+            <p>© 2025 GFG Media | Designed with ❤️ | Designer , <a href="tapuwamapfumo.netlify.app">TheGovenor</a></p>
         </div>
     </footer>
 
@@ -419,6 +456,13 @@
             // Toggle sidebar menu
             menuToggle.addEventListener("click", function() {
                 sidebar.classList.toggle("active");
+            });
+
+            // Close sidebar when clicking outside
+            document.addEventListener("click", function(event) {
+                if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+                    sidebar.classList.remove("active");
+                }
             });
 
             // Toggle dropdown on click
