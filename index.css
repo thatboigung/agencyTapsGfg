@@ -714,6 +714,9 @@ a{
     letter-spacing: 2px;
     margin-bottom: 30px;
 }
+.reveals button{
+    width: fit-content;
+}
 .reveals {
     padding: 50px 20px; /* Add padding for spacing */
     background: #000; /* Black background for the reveals section */
