@@ -106,33 +106,59 @@
     </section>
     
 
-    <section class="reveals">
-        <h1>Our Branding Processes</h1>
-        <p></p>
-        <div class="reveal-container">
-            <div class="reveal active" style="background-color: inherit;font-size: larger;">
-                <h3>1. Discovery</h3>
-                <p>Understanding your business, target audience, and goals.</p>
+    <section class="process-section" id="process" style="background-color: #000; color: #fff;">
+        <h2 class="section-title" style="color: #FFA500;">🚀 Our Process</h2>
+        <p class="section-subtitle" style="color: #ccc;">From concept to launch – here’s how we bring your digital vision to life.</p>
+    
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon" style="background-color: #FFA500; color: #000;">📝</div>
+                <div class="timeline-content">
+                    <h3 style="color: #FFA500;">1. Discovery & Consultation</h3>
+                    <p style="color: #ccc;">We dive deep into your vision, goals, and technical needs to craft a roadmap for success.</p>
+                </div>
             </div>
-            <div class="reveal" style="background-color: inherit;font-size: larger">
-                <h3>2. Strategy</h3>
-                <p>Creating a unique branding strategy that aligns with your vision.</p>            </div>
-            <div class="reveal" style="background-color: inherit;font-size: larger">
-                <h3>3. Design</h3>
-                <p>Crafting logos, color palettes, typography, and brand assets.</p>
+    
+            <div class="timeline-item">
+                <div class="timeline-icon" style="background-color: #FFA500; color: #000;">📐</div>
+                <div class="timeline-content">
+                    <h3 style="color: #FFA500;">2. Planning & Strategy</h3>
+                    <p style="color: #ccc;">We outline the architecture, design wireframes, and select the perfect tech stack for your project.</p>
+                </div>
             </div>
-            <div class="reveal" style="background-color: inherit;font-size: larger">
-                <h3>4. Implementation</h3>
-                <p>Applying branding across all platforms and touchpoints.</p>
+    
+            <div class="timeline-item">
+                <div class="timeline-icon" style="background-color: #FFA500; color: #000;">💻</div>
+                <div class="timeline-content">
+                    <h3 style="color: #FFA500;">3. Design & Prototyping</h3>
+                    <p style="color: #ccc;">We create sleek, user-friendly designs and interactive prototypes to bring your vision to life.</p>
+                </div>
             </div>
-            <div class="reveal" style="background-color: inherit;font-size: larger">
-                <h3>5. Evaluation</h3>
-                <p>Monitoring and refining your brand to ensure long-term success.</p>
+    
+            <div class="timeline-item">
+                <div class="timeline-icon" style="background-color: #FFA500; color: #000;">🛠️</div>
+                <div class="timeline-content">
+                    <h3 style="color: #FFA500;">4. Development</h3>
+                    <p style="color: #ccc;">Our developers build your application with precision, using cutting-edge tools and frameworks.</p>
+                </div>
+            </div>
+    
+            <div class="timeline-item">
+                <div class="timeline-icon" style="background-color: #FFA500; color: #000;">🧪</div>
+                <div class="timeline-content">
+                    <h3 style="color: #FFA500;">5. Testing & Quality Assurance</h3>
+                    <p style="color: #ccc;">We rigorously test every feature to ensure your app is flawless, secure, and ready for launch.</p>
+                </div>
+            </div>
+    
+            <div class="timeline-item">
+                <div class="timeline-icon" style="background-color: #FFA500; color: #000;">🚀</div>
+                <div class="timeline-content">
+                    <h3 style="color: #FFA500;">6. Launch & Deployment</h3>
+                    <p style="color: #ccc;">We deploy your app, optimize it for performance, and provide ongoing support to keep it running smoothly.</p>
+                </div>
             </div>
         </div>
-        
-        <button class="prev" id="prevBtn">❮ </button>
-        <button class="next" id="nextBtn"> ❯</button>
     </section>
 
     <section class="services">
@@ -466,7 +492,29 @@
             });
 
             image.style.transform = 'translateY(0)'; // Bring the clicked image to the top
+
+
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            
+            if (itemTop < triggerBottom) {
+                item.classList.add("show");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Trigger on load
+});
+
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
