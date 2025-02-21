@@ -1,0 +1,88 @@
+/* 🌙 Dark Theme with Orange Accents */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* 🔥 Hero Section */
+.hero {
+    background: linear-gradient(to right, #ff8800, #ff5500);
+    padding: 100px 20px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+.cta-btn {
+    background-color: #ff5500;
+    color: white;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* 🚀 Sections */
+section {
+    padding: 60px 20px;
+}
+
+/* 🌟 Feature Grid */
+.features-grid, .service-grid, .pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.feature-item, .service-card, .plan {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* 📌 Portfolio */
+.portfolio-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.portfolio-gallery img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 🎯 Process */
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.step {
+    background: #333;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+/* 🎯 Pricing */
+.plan {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* 📢 CTA */
+.contact {
+    background: linear-gradient(to right, #ff5500, #ff8800);
+    padding: 60px;
+}
