@@ -973,7 +973,7 @@ html {
 }
 
 .section-title {
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: gainsboro;
     margin-bottom: 40px;
@@ -1486,7 +1486,7 @@ html {
 }
 
 .faq-section .section-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: #ff8c00;
 }
