@@ -383,7 +383,7 @@
         <!-- Contact Form -->
         <div class="contact-form" id="contact-form">
             <h3>Contact Us</h3>
-            <form action="submit-form.php" method="POST">
+            <form id="contactForm">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="How can we help you?" rows="4" required></textarea>
@@ -391,6 +391,71 @@
             </form>
         </div>
     
+        <!-- Platform Selection Popup -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content">
+                <h3>Choose a Platform to Send Your Message</h3>
+                <div class="platform-options">
+                    <a href="https://wa.me/+260762357426" target="_blank">  <button class="platform-btn" id="whatsappBtn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                        WhatsApp
+                    </button>
+                    </a>
+                    <a href="https://www.instagram.com/_thegovenor/" target="_blank">
+                    <button class="platform-btn" id="instagramBtn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+                        Instagram
+                    </button>
+                </a>
+                <a href="https://web.facebook.com/tapuwa.mapfumo.3" target="_blank">
+                    <button class="platform-btn" id="facebookBtn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                        Facebook
+                    </button>
+                </a>
+                </div>
+                <button class="close-btn" id="closePopup">Close</button>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const closePopup = document.getElementById('closePopup');
+
+    // Show popup when form is submitted
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent form submission
+        popupOverlay.classList.add('active'); // Show popup
+    });
+
+    // Close popup when close button is clicked
+    closePopup.addEventListener('click', function () {
+        popupOverlay.classList.remove('active'); // Hide popup
+    });
+
+    // Handle platform selection
+    const whatsappBtn = document.getElementById('whatsappBtn');
+    const instagramBtn = document.getElementById('instagramBtn');
+    const facebookBtn = document.getElementById('facebookBtn');
+
+    whatsappBtn.addEventListener('click', function () {
+        alert('Redirecting to WhatsApp...');
+        // Add WhatsApp redirection logic here
+    });
+
+    instagramBtn.addEventListener('click', function () {
+        alert('Redirecting to Instagram...');
+        // Add Instagram redirection logic here
+    });
+
+    facebookBtn.addEventListener('click', function () {
+        alert('Redirecting to Facebook...');
+        // Add Facebook redirection logic here
+    });
+});
+        </script>
     </section>
     
 

@@ -100,6 +100,21 @@ body {
     transition: opacity 1s ease; /* Smooth transition for opacity */
     z-index: 1; /* Place it behind the content */ 
 }
+
+.branding-taps .intro::after{
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:url('imgs/Screenshot\ 2025-02-04\ 042117.png'); /* Background image */
+    background-size: contain; /* Cover the entire area */
+    /* Center the image */
+    opacity: 0.2; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition for opacity */
+    z-index: 1; /* Place it behind the content */ 
+}
 .intro-text {
     position: relative; /* Position relative to place it above the background */
     z-index: 2; /* Ensure text is above the background */
@@ -1692,4 +1707,83 @@ html {
     border-radius: 10px;
     border: 2px solid #FFA500; /* Orange border */
     box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3); /* Orange shadow */
+}
+/* Popup Overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    max-width: 400px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.popup-overlay.active .popup-content {
+    transform: translateY(0);
+}
+
+/* Platform Buttons */
+.platform-options {
+    display: flex;
+    gap: 10px;
+}
+
+.platform-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.platform-btn:hover {
+    background-color: #ddd;
+}
+
+.platform-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Close Button */
+.close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #e59400;
 }
