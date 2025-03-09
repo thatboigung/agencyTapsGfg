@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFG Control Panel</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+      /* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Close Button */
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Basic list styling */
+#modalBody ul {
+    padding-left: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Objectives Section -->
+        <section class="section main-objectives">
+            <h2>🎯 Main Objectives</h2>
+            <ul>
+                <li>✅ Help 100 businesses improve their brand & online presence</li>
+                <li>✅ Close 5 new deals every week</li>
+                <li>✅ Position GFG Studios as the #1 creative & marketing agency for small businesses</li>
+            </ul>
+        </section>
+
+        <!-- Daily Task Manager Section -->
+        <section class="section daily-tasks">
+            <h2>✅ Daily Task Manager</h2>
+            <ul>
+                <li><input type="checkbox"> 2 Creative Designs</li>
+                <li><input type="checkbox"> 1 High-quality Photo/Video Edit</li>
+                <li><input type="checkbox"> 10 DMs sent to businesses</li>
+                <li><input type="checkbox"> 1 Visit to a business (physical outreach)</li>
+                <li><input type="checkbox"> Post Stories on FB, IG, TikTok & LinkedIn</li>
+            </ul>
+        </section>
+
+        <!-- Lead Tracker Section -->
+        <section class="section lead-tracker">
+            <h2>📇 Lead Tracker (CRM Lite)</h2>
+            <!-- Form to Add New Leads -->
+            <div class="add-lead-form">
+                <input type="text" id="businessName" placeholder="Business Name" required>
+                <input type="text" id="industry" placeholder="Industry" required>
+                <select id="status">
+                    <option value="New">New</option>
+                    <option value="Follow-up">Follow-up</option>
+                    <option value="Closed">Closed</option>
+                </select>
+                <input type="text" id="notes" placeholder="Notes">
+                <button id="addLeadBtn">Add Lead</button>
+            </div>
+        
+            <!-- Table to Display Leads -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Business Name</th>
+                        <th>Industry</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="leadTableBody">
+                    <!-- Leads will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Target Industries Section -->
+        <section class="section analytics-dashboard">
+            <h2>📊 Analytics Dashboard</h2>
+        
+            <!-- Form to Add Daily Data -->
+            <div class="add-data-form">
+                <h3>Add Daily Data</h3>
+                <label for="businessesContacted">Businesses Contacted:</label>
+                <input type="number" id="businessesContacted" placeholder="Enter number" min="0">
+                
+                <label for="dealsClosed">Deals Closed:</label>
+                <input type="number" id="dealsClosed" placeholder="Enter number" min="0">
+                
+                <label for="revenueGenerated">Revenue Generated ($):</label>
+                <input type="number" id="revenueGenerated" placeholder="Enter amount" min="0">
+                
+                <label for="socialPostsMade">Social Posts Made:</label>
+                <input type="number" id="socialPostsMade" placeholder="Enter number" min="0">
+                
+                <button id="addDataBtn">Add Data</button>
+            </div>
+        
+            <!-- Table to Display Analytics -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>This Week</th>
+                        <th>This Month</th>
+                    </tr>
+                </thead>
+                <tbody id="analyticsTableBody">
+                    <tr>
+                        <td>Businesses Contacted</td>
+                        <td id="weekBusinesses">0</td>
+                        <td id="monthBusinesses">0</td>
+                    </tr>
+                    <tr>
+                        <td>Deals Closed</td>
+                        <td id="weekDeals">0</td>
+                        <td id="monthDeals">0</td>
+                    </tr>
+                    <tr>
+                        <td>Revenue Generated</td>
+                        <td id="weekRevenue">$0</td>
+                        <td id="monthRevenue">$0</td>
+                    </tr>
+                    <tr>
+                        <td>Social Posts Made</td>
+                        <td id="weekPosts">0</td>
+                        <td id="monthPosts">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Knowledge Bank Section -->
+        <section class="section knowledge-bank">
+            <h2>📚 Knowledge Bank (Quick Reference)</h2>
+            <ul>
+                <li>
+                    <h3>Cold DM Templates</h3>
+                    <p>Pre-written templates for reaching out to potential clients via direct messages.</p>
+                    <ul>
+                        <li><strong>Template 1:</strong> "Hi [Name], I came across your business and love what you're doing! We specialize in helping businesses like yours grow through branding and marketing. Would you be open to a quick chat?"</li>
+                        <li><strong>Template 2:</strong> "Hey [Name], I noticed your business could use a stronger online presence. We’ve helped similar businesses achieve [specific result]. Can I share some ideas with you?"</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Proposal Template</h3>
+                    <p>A structured template for creating professional proposals for clients.</p>
+                    <ul>
+                        <li><strong>Introduction:</strong> Briefly introduce GFG Studios and the purpose of the proposal.</li>
+                        <li><strong>Scope of Work:</strong> Outline the services you’ll provide (e.g., branding, content creation, etc.).</li>
+                        <li><strong>Timeline:</strong> Provide a clear timeline for deliverables.</li>
+                        <li><strong>Pricing:</strong> Break down the costs for each service.</li>
+                        <li><strong>Call to Action:</strong> Encourage the client to take the next step (e.g., "Let’s schedule a call to discuss further!").</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Pricing Packages List</h3>
+                    <p>Predefined pricing packages for different services.</p>
+                    <ul>
+                        <li><strong>Basic Package:</strong> $500 - Logo design + social media setup.</li>
+                        <li><strong>Standard Package:</strong> $1,200 - Branding kit + 5 social media posts.</li>
+                        <li><strong>Premium Package:</strong> $2,500 - Full branding + website design + 10 social media posts.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Social Media Content Ideas</h3>
+                    <p>Creative ideas for social media posts.</p>
+                    <ul>
+                        <li><strong>Behind-the-Scenes:</strong> Share a day in the life at GFG Studios.</li>
+                        <li><strong>Client Success Stories:</strong> Highlight a client’s success after working with GFG.</li>
+                        <li><strong>Tips & Tricks:</strong> Post quick marketing or branding tips.</li>
+                        <li><strong>Promotions:</strong> Announce discounts or special offers.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Objection Handling Tips</h3>
+                    <p>Strategies for handling common client objections.</p>
+                    <ul>
+                        <li><strong>Objection:</strong> "It’s too expensive."<br><strong>Response:</strong> "I understand your concern. Let me show you how our services will deliver a strong ROI for your business."</li>
+                        <li><strong>Objection:</strong> "I don’t have time."<br><strong>Response:</strong> "We handle everything for you, so you can focus on running your business. Let’s discuss how we can make this seamless."</li>
+                        <li><strong>Objection:</strong> "I’m not sure I need this."<br><strong>Response:</strong> "Many of our clients felt the same way initially, but after seeing the results, they were thrilled. Let’s explore how we can help you achieve your goals."</li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+
+    <script>
+        // You can add interactivity here if needed
+// For example, saving the state of checkboxes or updating the lead tracker dynamically
+
+document.addEventListener('DOMContentLoaded', function() {
+
+// Close if clicking outside modal
+window.onclick = function(event) {
+    const modal = document.getElementById("knowledgeModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                this.parentElement.style.textDecoration = 'line-through';
+            } else {
+                this.parentElement.style.textDecoration = 'none';
+            }
+        });
+    });
+});
+    </script>
+    <Script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const leadTableBody = document.getElementById('leadTableBody');
+    const addLeadBtn = document.getElementById('addLeadBtn');
+
+    // Function to add a new lead
+    addLeadBtn.addEventListener('click', function () {
+        const businessName = document.getElementById('businessName').value;
+        const industry = document.getElementById('industry').value;
+        const status = document.getElementById('status').value;
+        const notes = document.getElementById('notes').value;
+
+        if (businessName && industry && status) {
+            // Create a new row
+            const newRow = document.createElement('tr');
+
+            newRow.innerHTML = `
+                <td>${businessName}</td>
+                <td>${industry}</td>
+                <td>${status}</td>
+                <td>${notes}</td>
+                <td class="actions">
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            `;
+
+            // Add the new row to the table
+            leadTableBody.appendChild(newRow);
+
+            // Clear the form inputs
+            document.getElementById('businessName').value = '';
+            document.getElementById('industry').value = '';
+            document.getElementById('status').value = 'New';
+            document.getElementById('notes').value = '';
+
+            // Add event listeners for edit and delete buttons
+            addRowEventListeners(newRow);
+        } else {
+            alert('Please fill in all required fields (Business Name, Industry, Status).');
+        }
+    });
+
+    // Function to add event listeners to edit and delete buttons
+    function addRowEventListeners(row) {
+        const editBtn = row.querySelector('.edit');
+        const deleteBtn = row.querySelector('.delete');
+
+        // Edit functionality
+        editBtn.addEventListener('click', function () {
+            const cells = row.querySelectorAll('td');
+            const businessName = cells[0].innerText;
+            const industry = cells[1].innerText;
+            const status = cells[2].innerText;
+            const notes = cells[3].innerText;
+
+            // Populate the form with the selected row's data
+            document.getElementById('businessName').value = businessName;
+            document.getElementById('industry').value = industry;
+            document.getElementById('status').value = status;
+            document.getElementById('notes').value = notes;
+
+            // Remove the row after editing
+            row.remove();
+        });
+
+        // Delete functionality
+        deleteBtn.addEventListener('click', function () {
+            row.remove();
+        });
+    }
+});
+    </Script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const addDataBtn = document.getElementById('addDataBtn');
+
+    // Initialize weekly and monthly data
+    let weekData = {
+        businessesContacted: 0,
+        dealsClosed: 0,
+        revenueGenerated: 0,
+        socialPostsMade: 0
+    };
+
+    let monthData = {
+        businessesContacted: 0,
+        dealsClosed: 0,
+        revenueGenerated: 0,
+        socialPostsMade: 0
+    };
+
+    // Function to update the table
+    function updateTable() {
+        document.getElementById('weekBusinesses').innerText = weekData.businessesContacted;
+        document.getElementById('monthBusinesses').innerText = monthData.businessesContacted;
+
+        document.getElementById('weekDeals').innerText = weekData.dealsClosed;
+        document.getElementById('monthDeals').innerText = monthData.dealsClosed;
+
+        document.getElementById('weekRevenue').innerText = `$${weekData.revenueGenerated}`;
+        document.getElementById('monthRevenue').innerText = `$${monthData.revenueGenerated}`;
+
+        document.getElementById('weekPosts').innerText = weekData.socialPostsMade;
+        document.getElementById('monthPosts').innerText = monthData.socialPostsMade;
+    }
+
+    // Function to add daily data
+    addDataBtn.addEventListener('click', function () {
+        const businessesContacted = parseInt(document.getElementById('businessesContacted').value) || 0;
+        const dealsClosed = parseInt(document.getElementById('dealsClosed').value) || 0;
+        const revenueGenerated = parseInt(document.getElementById('revenueGenerated').value) || 0;
+        const socialPostsMade = parseInt(document.getElementById('socialPostsMade').value) || 0;
+
+        // Update weekly data
+        weekData.businessesContacted += businessesContacted;
+        weekData.dealsClosed += dealsClosed;
+        weekData.revenueGenerated += revenueGenerated;
+        weekData.socialPostsMade += socialPostsMade;
+
+        // Update monthly data
+        monthData.businessesContacted += businessesContacted;
+        monthData.dealsClosed += dealsClosed;
+        monthData.revenueGenerated += revenueGenerated;
+        monthData.socialPostsMade += socialPostsMade;
+
+        // Update the table
+        updateTable();
+
+        // Clear the form inputs
+        document.getElementById('businessesContacted').value = '';
+        document.getElementById('dealsClosed').value = '';
+        document.getElementById('revenueGenerated').value = '';
+        document.getElementById('socialPostsMade').value = '';
+    });
+});
+    </script>
+</body>
+</html>
