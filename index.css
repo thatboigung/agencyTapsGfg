@@ -79,7 +79,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image:url('imgs/website-647013_1280.jpg'); /* Background image */
+    background-image:url('imgs/IMG_0019.JPG'); /* Background image */
     background-size: cover; /* Cover the entire area */
     background-position: top; /* Center the image */
     opacity: 0.2; /* Initially hidden */
@@ -108,7 +108,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image:url('imgs/Screenshot\ 2025-02-04\ 042117.png'); /* Background image */
+    background-image:url('imgs/IMG_0018.JPG'); /* Background image */
     background-size: contain; /* Cover the entire area */
     /* Center the image */
     opacity: 0.2; /* Initially hidden */
@@ -354,6 +354,12 @@ nav ul li a:hover {
 }
 
 .service-info {
+    flex: 1; /* Take up equal space */
+    padding: 20px; /* Padding for the info section */
+    text-align: center; /* Center text on small screens */
+    
+}
+.service-infoo {
     flex: 1; /* Take up equal space */
     padding: 20px; /* Padding for the info section */
     text-align: center; /* Center text on small screens */
